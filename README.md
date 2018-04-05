@@ -27,7 +27,7 @@ New python executable in venv/bin/python
 Installing distribute............done.
 ```
 
-### The following steps are called method:
+### The following steps are called runing method:
 to run the flask backend:
 ```
 fabmanager run
