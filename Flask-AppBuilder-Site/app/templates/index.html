@@ -1,0 +1,193 @@
+<!-- extend base layout -->
+{% extends "index_base.html" %}
+
+{% block head_css %}
+        {{ super() }}
+		<!-- <link href="https://www.4paradigm.com/css/normalize.css" rel="stylesheet"> -->
+		<!-- <link href="https://www.4paradigm.com/css/app.css" rel="stylesheet"> -->
+		<link href="https://www.4paradigm.com/css/finance_case.css" rel="stylesheet">
+		<link href="{{url_for('static',filename='css/custom.css')}}" rel="stylesheet">
+		
+{% endblock %}
+
+{% block content %}
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+       <!-- <li data-target="#carousel-example-generic" data-slide-to="1" ></li> -->
+       <!-- <li data-target="#carousel-example-generic" data-slide-to="2" ></li> -->
+        <!-- <li data-target="#carousel-example-generic" data-slide-to="3" ></li> -->
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" >
+        <div class="item active">
+            <div class="jumbotron" style="background: url('static/img/slide1.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+            <div class="container">
+            <!-- <h1><i class="fa fa-desktop">Fault Diagnosis Platform</i></h1> -->
+			<h1 align="center">Welcom to <br>Fault Diagnosis Platform</h1>
+            <p align="center">{{_("A fast useful tool for fault analysis and diagnosis.")}}</p>
+            <center>
+            <p><a class="btn btn-primary btn-lg" href="/login/" role="button"> {{_("Enter")}} </a></p>
+            </center>
+            </div>
+           </div>
+        </div>
+
+        <!-- <div class="item"> -->
+            <!-- <div class="jumbotron" style="background: url('static/img/slide2.jpg');background-size: 100% 100%;background-repeat: no-repeat;"> -->
+            <!-- <div class="container"> -->
+            <!-- <h1><i class="fa fa-github">{{_("Free and Open Source")}}</i></h1> -->
+                <!-- <p>{{_("Use it any way you like, it's free to use. Feel free to contribute, post questions, propose new features, report bugs. You can browse the code freely on github.")}}</p> -->
+            <!-- <center> -->
+                <!-- <p><a class="btn btn-primary btn-lg" href="/" role="button">{{_("Issues")}} &raquo;</a></p> -->
+            <!-- </center> -->
+            <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="item"> -->
+            <!-- <div class="jumbotron" style="background: url('static/img/slide3.jpg');background-size: 100% 100%;background-repeat: no-repeat;"> -->
+            <!-- <div class="container"> -->
+            <!-- <h1><i class="fa fa-book">{{_("Documentation")}}</i></h1> -->
+            <!-- <p>{{_("Every feature is documented with examples. API documentation is automatically generated from commented code.")}}</p> -->
+            <!-- <center> -->
+            <!-- <p><a class="btn btn-primary btn-lg" href="http://flask-appbuilder.readthedocs.org/en/latest/" role="button">{{_("Documentation")}} &raquo;</a></p> -->
+            <!-- </center> -->
+            <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="item"> -->
+            <!-- <div class="jumbotron" style="background: url('static/img/slide4.jpg');background-size: 100% 100%;background-repeat: no-repeat;"> -->
+            <!-- <div class="container"> -->
+            <!-- <h1><i class="fa fa-play">{{_("Live Demo")}}</i></h1> -->
+            <!-- <p>{{_("Login and get a hold on the quick how to example, with a simple contacts app. This will show the basic features of the framework. Feel free to login using user 'guest' password 'welcome'")}}</p> -->
+            <!-- <center> -->
+            <!-- <p><a class="btn btn-primary btn-lg"  href="login" role="button">{{_("Login")}} &raquo;</a></p> -->
+            <!-- </center> -->
+            <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+</div>
+
+    <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+
+</div>
+<div id="content-scase" class="content-wrap" >
+	<div id="feature">
+		<div class="feature-card">
+			<div class="title-img">
+				<img src="https://www-test.4paradigm.com/dyimage/jinzhun.png" alt="精准" class="bc-img">
+				<img src="https://www-test.4paradigm.com/dyimage/jingzhun_icon.png" alt="精准" class="icon-img">
+			</div>
+			<div class="txt-wrap">
+				<div class="title">精准</div>
+				<div class="fe-abstract">不是几条规则 而是数亿特征</div>
+				<div class="description">该平台的故障侦测解决方案通过超高维的机器学习技术，精准地刻画故障数据的每个维度，形成成千上万的特征空间，从而提供更全面精准的故障预警评分。
+				</div>
+			</div>
+			<div class="transition-bar"></div>
+		</div>
+		<div class="feature-card">
+			<div class="title-img">
+				<img src="https://www-test.4paradigm.com/dyimage/minjie.png" alt="敏捷" class="bc-img">
+				<img src="https://www-test.4paradigm.com/dyimage/minjie_icon.png" alt="敏捷" class="icon-img">
+			</div>
+			<div class="txt-wrap">
+				<div class="title">敏捷</div>
+				<div class="fe-abstract">不是事后分析 而是实时决策</div>
+				<div class="description">该平台的测解决方案能够支撑高并发的在线实时预估，提供实时和准实时对故障数据进行风险评估。</div>
+			</div>
+			<div class="transition-bar"></div>
+			</div>
+		<div class="feature-card">
+			<div class="title-img">
+				<img src="https://www-test.4paradigm.com/dyimage/zhineng.png" alt="智能" class="bc-img">
+				<img src="https://www-test.4paradigm.com/dyimage/zhineng_icon.png" alt="智能" class="icon-img">
+			</div>
+			<div class="txt-wrap">
+				<div class="title">智能</div>
+				<div class="fe-abstract">不是一成不变 而是不断迭代</div>
+				<div class="description">该平台的交易欺诈侦测方案能够通过基于新的故障数据的反馈，不断地自我优化迭代出新的模型，为用户在设备维护端端提供持续的助力。</div>
+			</div>
+			<div class="transition-bar"></div>
+		</div>
+	</div>
+</div>
+
+
+      <!-- <div class="row" style="background:url('static/img/polaroid.png')"> -->
+        <!-- <div class="col-md-7 col-md-offset-1 col-xs-offset-1"> -->
+          <!-- <h2 class="featurette-heading">{{_("Super fast development ")}}<span class="text-muted">{{_(" Highly customizable")}}</span></h2> -->
+            <!-- <ul> -->
+          <!-- <li class="lead tight">{{_("Automatic menu generation.")}}</li> -->
+        <!-- <li class="lead tight">{{_("Automatic CRUD generation.")}}</li> -->
+        <!-- <li class="lead tight">{{_("Multiple actions on db records.")}}</li> -->
+        <!-- <li class="lead tight">{{_("Big variety of filters for your lists.")}}</li> -->
+        <!-- <li class="lead tight">{{_("Various view widgets: lists, master-detail, list of thumbnails etc")}}</li> -->
+        <!-- <li class="lead tight">{{_("Select2, Datepicker, DateTimePicker")}}</li> -->
+        <!-- <li class="lead tight">{{_("Google charts with automatic group by or direct values and filters.")}}</li> -->
+                <!-- </ul> -->
+        <!-- </div> -->
+        <!-- <div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1"> -->
+          <!-- <h1><i class="fa fa-bolt fa-5x"></i></h1> -->
+        <!-- </div> -->
+      <!-- </div> -->
+
+      <!-- <div class="row" style="background:url('static/img/fabric_1.png')"> -->
+          <!-- <div class="col-md-3 col-md-offset-1 col-xs-offset-1 "> -->
+           <!-- <h1><i class="fa fa-lock fa-5x"></i></h1> -->
+          <!-- </div> -->
+          <!-- <div class="col-md-7 col-md-offset-1 col-xs-offset-1"> -->
+            <!-- <h2 class="featurette-heading">{{_("Ready to go Security ")}}<span class="text-muted">{{_(" Fully granular")}}</span></h2> -->
+          <!-- <ul> -->
+            <!-- <li class="lead tight">{{_("Automatic permissions lookup, based on exposed methods.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Inserts on the Database all the detailed permissions possible on your application.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Public (no authentication needed) and Private permissions.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Role based permissions.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Authentication support for OpenID, Database and LDAP.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Support for self user registration.")}}</li> -->
+          <!-- </ul> -->
+        <!-- </div> -->
+      <!-- </div> -->
+
+      <!-- <div class="row featurette" style="background:url('static/img/old_moon.png')"> -->
+        <!-- <div class="col-md-7 col-md-offset-1 col-xs-offset-1"> -->
+          <!-- <h2 class="featurette-heading">{{_("Form Generation ")}}<span class="text-muted">{{_(" With full control")}}</span></h2> -->
+        <!-- <ul> -->
+            <!-- <li class="lead tight">{{_("Automatic, Add, Edit and Show from Database Models.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Labels and descriptions for each field.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Automatic base validators from model's definition.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Custom validators, extra fields, custom filters for related dropdown lists.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Image and File support for upload and database field association")}}</li> -->
+            <!-- <li class="lead tight">{{_("Field sets for Form's (Django style).")}}</li> -->
+        <!-- </ul> -->
+        <!-- </div> -->
+        <!-- <div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1"> -->
+          <!-- <h1><i class="fa fa-list-alt fa-5x"></i></h1> -->
+        <!-- </div> -->
+      <!-- </div> -->
+
+       <!-- <div class="row" style="background:url('static/img/green_cup.png')"> -->
+          <!-- <div class="col-md-3 col-md-offset-1 col-xs-offset-1"> -->
+           <!-- <h1><i class="fa fa-cog fa-5x"></i></h1> -->
+          <!-- </div> -->
+          <!-- <div class="col-md-7 col-md-offset-1 col-xs-offset-1"> -->
+            <!-- <h2 class="featurette-heading">{{_("Multi Language Support ")}}<span class="text-muted">{{_(" and more")}}</span></h2> -->
+          <!-- <ul> -->
+            <!-- <li class="lead tight">{{_("Framework translations and your app translations merge.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Bootstrap.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Font Awesome Icons.")}}</li> -->
+            <!-- <li class="lead tight">{{_("Select2, Date Picker.")}}</li> -->
+          <!-- </ul> -->
+        <!-- </div> -->
+      <!-- </div> -->
+
+{% endblock %}
